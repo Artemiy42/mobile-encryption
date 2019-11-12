@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EncryptActivity">
+    <item
+        android:id="@+id/mn_file_action"
+        android:icon="@drawable/ic_insert_drive_file_black_24dp"
+        android:title="Файл"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/mn_open_file"
+                android:icon="@drawable/ic_folder_open_black_24dp"
+                android:title="Відкрити"/>
+            <item
+                android:id="@+id/mn_save_file"
+                android:icon="@drawable/ic_save_black_24dp"
+                android:title="Зберегти"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/mn_security"
+        android:icon="@drawable/ic_lock_white_24dp"
+        android:title="Шифрування"
+        android:onClick="showDialog"
+        app:showAsAction="always">
+        <!--<menu>
+            <item
+                android:id="@+id/"
+                />
+        </menu>-->
+    </item>
+    <item
+        android:id="@+id/mn_about_program"
+        android:title="Про програму"
+        app:showAsAction="never"/>
+</menu>
