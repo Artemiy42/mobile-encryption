@@ -1,22 +1,21 @@
 package com.misterc.encodedecode;
 
-import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 public class MenuActivity extends AppCompatActivity {
 
+    public final int PERMISSION_REQUEST_READ = 10;
+    public final int PERMISSION_REQUEST_SAVE = 20;
     public static final int READ_REQUEST_CODE = 10;
     public static final int SAVE_REQUEST_CODE = 20;
     public static final String KEY_SECRET_KEY_INDEX = "SAVED_SECRET_KEY_INDEX";
@@ -57,17 +56,12 @@ public class MenuActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
-            Toast.makeText(this, "Нет разрешения на доступ к хранилищу. Включите его в настройках", Toast.LENGTH_SHORT).show();
-        }
-
         switch (item.getItemId()) {
             case R.id.mn_open_file:
-                performFileSearch();
+                PermissionUtil.requestPerms(this, PermissionUtil.WRITE_EXTERNAL_STORAGE, PERMISSION_REQUEST_READ);
                 break;
             case R.id.mn_save_file:
-                performSaveFile();
+                PermissionUtil.requestPerms(this, PermissionUtil.WRITE_EXTERNAL_STORAGE, PERMISSION_REQUEST_SAVE);
                 break;
             case R.id.mn_security:
                 showDialog();
@@ -119,5 +113,25 @@ public class MenuActivity extends AppCompatActivity {
 
         builder.create();
         builder.show();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            switch (requestCode) {
+                case PERMISSION_REQUEST_READ:
+                    performFileSearch();
+                    break;
+                case PERMISSION_REQUEST_SAVE:
+                    performSaveFile();
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            PermissionUtil.showNoStoragePermissionSnackbar(this);
+        }
     }
 }

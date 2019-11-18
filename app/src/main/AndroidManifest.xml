@@ -25,6 +25,7 @@
         </activity>
         <activity android:name=".EncryptActivity"></activity>
         <activity android:name=".DecryptActivity"></activity>
+        <activity android:name=".MenuActivity"></activity>
     </application>
 
 </manifest>

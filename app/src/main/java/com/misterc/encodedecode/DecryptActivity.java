@@ -53,7 +53,6 @@ public class DecryptActivity extends MenuActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
             case READ_REQUEST_CODE:
                 tv_output.setText(FileUtil.readFile(data));
