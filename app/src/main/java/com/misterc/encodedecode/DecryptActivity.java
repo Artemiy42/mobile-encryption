@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-public class EncryptActivity extends MenuActivity {
+public class DecryptActivity extends MenuActivity {
 
     private static final String TAG = "MyLogs";
 
@@ -21,27 +21,27 @@ public class EncryptActivity extends MenuActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_encrypt);
+        setContentView(R.layout.activity_decrypt);
 
         tv_output = findViewById(R.id.tv_output);
         tv_encode = findViewById(R.id.tv_encode);
         et_password = findViewById(R.id.et_password);
 
-        Button btn_encode = findViewById(R.id.btn_encode);
-        btn_encode.setOnClickListener(new View.OnClickListener() {
+        Button btn_decode = findViewById(R.id.btn_encode);
+        btn_decode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String encMsq = "";
+                String decMsq = "";
                 String password = et_password.getText().toString();
 
                 if (password.isEmpty()) {
-                    Toast.makeText(EncryptActivity.this, "Для шифрування треба ввести пароль", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DecryptActivity.this, "Для дешифрування треба ввести пароль", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 try {
-                    encMsq = SimpleCrypto.encrypt(password, tv_output.getText().toString(), getSecretKeyItem());
-                    tv_encode.setText(encMsq);
+                    decMsq = SimpleCrypto.decrypt(password, tv_output.getText().toString(), getSecretKeyItem());
+                    tv_encode.setText(decMsq);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

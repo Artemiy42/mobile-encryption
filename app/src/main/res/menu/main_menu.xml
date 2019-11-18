@@ -23,7 +23,6 @@
         android:id="@+id/mn_security"
         android:icon="@drawable/ic_lock_white_24dp"
         android:title="Шифрування"
-        android:onClick="showDialog"
         app:showAsAction="always">
         <!--<menu>
             <item
