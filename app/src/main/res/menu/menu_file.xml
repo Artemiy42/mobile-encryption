@@ -6,23 +6,23 @@
     <item
         android:id="@+id/mn_file_action"
         android:icon="@drawable/ic_insert_drive_file_black_24dp"
-        android:title="Файл"
-        app:showAsAction="always">
+        android:title="@string/title_file"
+        app:showAsAction="ifRoom">
         <menu>
             <item
                 android:id="@+id/mn_open_file"
                 android:icon="@drawable/ic_folder_open_black_24dp"
-                android:title="Відкрити"/>
+                android:title="@string/title_open"/>
             <item
                 android:id="@+id/mn_save_file"
                 android:icon="@drawable/ic_save_black_24dp"
-                android:title="Зберегти"/>
+                android:title="@string/title_save"/>
         </menu>
     </item>
     <item
         android:id="@+id/mn_security"
         android:icon="@drawable/ic_lock_white_24dp"
-        android:title="Шифрування"
-        app:showAsAction="always">
+        android:title="@string/title_secret_key"
+        app:showAsAction="ifRoom">
     </item>
 </menu>

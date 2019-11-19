@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Decode"
+        android:text="@string/decode"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/et_password"
@@ -31,7 +31,7 @@
             android:id="@+id/tv_output"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Зашифрований текст" />
+            android:hint="@string/encrypt_text" />
     </ScrollView>
 
     <ScrollView
@@ -47,7 +47,7 @@
             android:id="@+id/tv_encode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Розшифрований текст" />
+            android:hint="@string/decrypt_text" />
     </ScrollView>
 
     <EditText
@@ -56,17 +56,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toStartOf="@+id/btn_encode"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/coordinator"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

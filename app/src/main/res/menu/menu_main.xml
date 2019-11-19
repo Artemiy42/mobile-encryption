@@ -3,6 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/mn_about_program"
-        android:title="Про програму"
+        android:title="@string/title_about_program"
         app:showAsAction="never"/>
 </menu>

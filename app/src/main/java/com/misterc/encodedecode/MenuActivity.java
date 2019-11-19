@@ -80,9 +80,9 @@ public class MenuActivity extends AppCompatActivity {
     private void showDialogAboutProgram() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("Про програму")
-                .setMessage("Додаток Mobile Encryption для шифрування та дешифрування файлів\n\nАвтор: MisterC\nEmail: Artemiy.vlog@gmail.com\n")
-                .setPositiveButton("Ок", new DialogInterface.OnClickListener() {
+        builder.setTitle(R.string.title_about_program)
+                .setMessage(R.string.message_about_program)
+                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
@@ -110,7 +110,7 @@ public class MenuActivity extends AppCompatActivity {
     private void showDialog() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("Виберіть шифрування повідомлення")
+        builder.setTitle(R.string.choose_secret_key)
                 .setSingleChoiceItems(R.array.key_values, savedSecretKeyIndex, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -118,13 +118,13 @@ public class MenuActivity extends AppCompatActivity {
                     }
                 })
                 .setCancelable(false)
-                .setPositiveButton("Ок", new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         savedSecretKeyIndex = ((AlertDialog) dialogInterface).getListView().getCheckedItemPosition();
                     }
                 })
-                .setNegativeButton("Скасувати", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.cancel();
@@ -151,7 +151,7 @@ public class MenuActivity extends AppCompatActivity {
                     break;
             }
         } else {
-            PermissionUtil.showNoStoragePermissionSnackbar(this);
+            PermissionUtil.showNoStoragePermission(this);
         }
     }
 }

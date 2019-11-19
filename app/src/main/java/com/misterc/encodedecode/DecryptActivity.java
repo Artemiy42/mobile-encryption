@@ -35,7 +35,7 @@ public class DecryptActivity extends MenuActivity {
                 String password = et_password.getText().toString();
 
                 if (password.isEmpty()) {
-                    Toast.makeText(DecryptActivity.this, "Для дешифрування треба ввести пароль", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DecryptActivity.this, R.string.decrypt_want_password, Toast.LENGTH_SHORT).show();
                     return;
                 }
 

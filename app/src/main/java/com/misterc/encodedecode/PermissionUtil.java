@@ -18,7 +18,6 @@ import com.google.android.material.snackbar.Snackbar;
 public final class PermissionUtil {
 
     private static final String MNC = "MNC";
-
     public static final String WRITE_EXTERNAL_STORAGE = Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
     private static boolean isMNC() {
@@ -34,24 +33,23 @@ public final class PermissionUtil {
     }
 
     public static void requestPerms(Activity activity, String permissions, int requestCode) {
-//        if (!hasPermission(activity, permissions)) {
             activity.requestPermissions(new String[] {permissions}, requestCode);
     }
 
-    public static void showNoStoragePermissionSnackbar(final Activity activity) {
+    public static void showNoStoragePermission(final Activity activity) {
         if (activity.shouldShowRequestPermissionRationale(WRITE_EXTERNAL_STORAGE)) {
-            Toast.makeText(activity, "Дозвіл на доступ до сховища не надан", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, R.string.user_denied, Toast.LENGTH_SHORT).show();
         } else {
             new AlertDialog.Builder(activity)
-                .setTitle("Необхідний дозвіл")
-                .setMessage("Немає дозволу на доступ до сховища. Увімкніть його в налаштуваннях")
-                .setPositiveButton("Надати", new DialogInterface.OnClickListener() {
+                .setTitle(R.string.title_alert_dialog)
+                .setMessage(R.string.message_alert_dialog)
+                .setPositiveButton(R.string.granted, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         openApplicationSettings(activity);
                     }
                 })
-                .setNegativeButton("Відміна", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.denied, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
@@ -70,15 +68,15 @@ public final class PermissionUtil {
     private static void requestPermissionWithRationale(final Activity activity, final String permissions, final int requestCode) {
         if (activity.shouldShowRequestPermissionRationale(permissions)) {
             new AlertDialog.Builder(activity)
-                .setTitle("Необхідний дозвіл")
-                .setMessage("Дозвіл потрібен для відкиття та збереження файлів")
-                .setPositiveButton("Надати", new DialogInterface.OnClickListener() {
+                .setTitle(R.string.title_alert_dialog)
+                .setMessage(R.string.rationale_alert_dialog)
+                .setPositiveButton(R.string.granted, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         requestPerms(activity, permissions, requestCode);
                     }
                 })
-                .setNegativeButton("Відміна", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.denied, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();

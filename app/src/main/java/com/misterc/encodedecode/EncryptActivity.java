@@ -35,7 +35,7 @@ public class EncryptActivity extends MenuActivity {
                 String password = et_password.getText().toString();
 
                 if (password.isEmpty()) {
-                    Toast.makeText(EncryptActivity.this, "Для шифрування треба ввести пароль", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EncryptActivity.this, R.string.encrypt_want_password, Toast.LENGTH_SHORT).show();
                     return;
                 }
 
