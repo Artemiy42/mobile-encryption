@@ -50,7 +50,8 @@ public class MenuActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_file, menu);
         return true;
     }
 
@@ -66,11 +67,30 @@ public class MenuActivity extends AppCompatActivity {
             case R.id.mn_security:
                 showDialog();
                 break;
+            case R.id.mn_about_program:
+                showDialogAboutProgram();
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
 
         return true;
+    }
+
+    private void showDialogAboutProgram() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Про програму")
+                .setMessage("Додаток Mobile Encryption для шифрування та дешифрування файлів\n\nАвтор: MisterC\nEmail: Artemiy.vlog@gmail.com\n")
+                .setPositiveButton("Ок", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+
+        builder.create();
+        builder.show();
     }
 
     private void performFileSearch() {

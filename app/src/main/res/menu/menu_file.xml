@@ -24,14 +24,5 @@
         android:icon="@drawable/ic_lock_white_24dp"
         android:title="Шифрування"
         app:showAsAction="always">
-        <!--<menu>
-            <item
-                android:id="@+id/"
-                />
-        </menu>-->
     </item>
-    <item
-        android:id="@+id/mn_about_program"
-        android:title="Про програму"
-        app:showAsAction="never"/>
 </menu>

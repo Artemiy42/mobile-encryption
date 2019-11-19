@@ -17,14 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EncryptActivity">
+        <activity android:name=".EncryptActivity"
+            android:windowSoftInputMode="adjustResize">
         </activity>
-        <activity android:name=".DecryptActivity">
+        <activity android:name=".DecryptActivity"
+            android:windowSoftInputMode="adjustResize">
         </activity>
-        <activity android:name=".MenuActivity">
-        </activity>
-        <activity android:name=".EncryptActivity"></activity>
-        <activity android:name=".DecryptActivity"></activity>
         <activity android:name=".MenuActivity"></activity>
     </application>
 
