@@ -1,0 +1,42 @@
+<resources>
+    <!-- Menu item -->
+    <string name="app_name" translatable="false">Mobile encryption</string>
+    <string name="title_about_program">Про программу</string>
+    <string name="title_file">Файл</string>
+    <string name="title_open">Открыть</string>
+    <string name="title_save">Сохранить</string>
+    <string name="title_secret_key">Шифрование</string>
+
+    <!-- Activity -->
+    <string name="encrypt">Зашифровать</string>
+    <string name="decrypt">Расшифровать</string>
+    <string name="password">Пароль</string>
+    <string name="encrypt_text">Зашифрованный текст</string>
+    <string name="text">Текст</string>
+    <string name="encode">Зашифровать</string>
+    <string name="decrypt_text">Расшифрованный текст</string>
+    <string name="decode">Расшифровать</string>
+
+    <!-- PermissionUtil -->
+    <string name="granted">Предоставить</string>
+    <string name="denied">Отмена</string>
+    <string name="title_alert_dialog">Необходимо разрешение</string>
+    <string name="message_alert_dialog">Нет разрешения на доступ к хранилищу. Включите его в настройках</string>
+    <string name="rationale_alert_dialog">Разрешение нужен для открытия и сохранения файлов</string>
+    <string name="user_denied">Разрешение на доступ к хранилищу представлено</string>
+    
+    <!-- MenuActivity -->
+    <string name="message_about_program">
+        Приложение Mobile Encryption для шифрования и дешифрования файлов\n\nАвтор: MisterC\nEmail: Artemiy.vlog@gmail.com\n
+    </string>
+    <string name="ok">Ок</string>
+    <string name="cancel">Отмена</string>
+    <string name="choose_secret_key">Выберите шифрование сообщения</string>
+
+    <!-- EncryptActivity -->
+    <string name="encrypt_want_password">Для шифрования нужно ввести пароль</string>
+
+    <!-- DecryptActivity -->
+    <string name="decrypt_want_password">Для дешифровки надо ввести пароль</string>
+
+</resources>

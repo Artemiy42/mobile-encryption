@@ -1,42 +1,42 @@
 <resources>
     <!-- Menu item -->
     <string name="app_name" translatable="false">Mobile encryption</string>
-    <string name="title_about_program">Про прогаму</string>
-    <string name="title_file">Файл</string>
-    <string name="title_open">Відкрити</string>
-    <string name="title_save">Зберегти</string>
-    <string name="title_secret_key">Шифрування</string>
+    <string name="title_about_program">About program</string>
+    <string name="title_file">File</string>
+    <string name="title_open">Open</string>
+    <string name="title_save">Save</string>
+    <string name="title_secret_key">Encryption method</string>
 
     <!-- Activity -->
-    <string name="encrypt">Шифрування</string>
-    <string name="decrypt">Дешифрування</string>
-    <string name="password">Пароль</string>
-    <string name="encrypt_text">Зашифрований текст</string>
-    <string name="text">Текст</string>
-    <string name="encode">Зашифрувати</string>
-    <string name="decrypt_text">Розшифрований текст</string>
-    <string name="decode">Дешифрувати</string>
+    <string name="encrypt">Encrypt</string>
+    <string name="decrypt">Decrypt</string>
+    <string name="password">Password</string>
+    <string name="encrypt_text">Encrypted text</string>
+    <string name="text">Text</string>
+    <string name="encode">Encrypt</string>
+    <string name="decrypt_text">Decrypted text</string>
+    <string name="decode">Decrypt</string>
 
     <!-- PermissionUtil -->
-    <string name="granted">Надати</string>
-    <string name="denied">Відміна</string>
-    <string name="title_alert_dialog">Необхідний дозвіл</string>
-    <string name="message_alert_dialog">Немає дозволу на доступ до сховища. Увімкніть його в налаштуваннях</string>
-    <string name="rationale_alert_dialog">Дозвіл потрібен для відкиття та збереження файлів</string>
-    <string name="user_denied">Дозвіл на доступ до сховища не надан</string>
+    <string name="granted">Granted</string>
+    <string name="denied">Denied</string>
+    <string name="title_alert_dialog">Permission required</string>
+    <string name="message_alert_dialog">Repository access is not allowed. Turn it on in Settings</string>
+    <string name="rationale_alert_dialog">Permission is required to open and save files</string>
+    <string name="user_denied">Repository access permission denied</string>
     
     <!-- MenuActivity -->
     <string name="message_about_program">
-        Додаток Mobile Encryption для шифрування та дешифрування файлів\n\nАвтор: MisterC\nEmail: Artemiy.vlog@gmail.com\n
+        Mobile Encryption application for encrypting and decrypting files\n\nBy: MisterC\nEmail: Artemiy.vlog@gmail.com\n
     </string>
-    <string name="ok">Ок</string>
-    <string name="cancel">Скасувати</string>
-    <string name="choose_secret_key">Виберіть шифрування повідомлення</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="choose_secret_key">Select message encryption</string>
 
     <!-- EncryptActivity -->
-    <string name="encrypt_want_password">Для шифрування треба ввести пароль</string>
+    <string name="encrypt_want_password">You must enter a password to encrypt</string>
 
     <!-- DecryptActivity -->
-    <string name="decrypt_want_password">Для дешифрування треба ввести пароль</string>
+    <string name="decrypt_want_password">You must enter a password to decrypt</string>
 
 </resources>
