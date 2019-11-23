@@ -1,6 +1,6 @@
 <resources>
     <!-- Menu item -->
-    <string name="app_name" translatable="false">Mobile encryption</string>
+    <string name="app_name">Mobile encryption</string>
     <string name="title_about_program">About program</string>
     <string name="title_file">File</string>
     <string name="title_open">Open</string>
@@ -38,5 +38,10 @@
 
     <!-- DecryptActivity -->
     <string name="decrypt_want_password">You must enter a password to decrypt</string>
+    <string name="title_version">Version</string>
+    <string name="summary_version">1.4</string>
+    <string name="title_developer">Developer</string>
+    <string name="summary_developer">MisterC</string>
+    <string name="title_settings">Settings</string>
 
 </resources>

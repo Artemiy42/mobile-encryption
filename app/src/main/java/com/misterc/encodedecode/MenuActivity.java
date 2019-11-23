@@ -67,8 +67,8 @@ public class MenuActivity extends AppCompatActivity {
             case R.id.mn_security:
                 showDialog();
                 break;
-            case R.id.mn_about_program:
-                showDialogAboutProgram();
+            case R.id.mn_settings:
+                openSettings();
                 break;
             default:
                 return super.onOptionsItemSelected(item);
@@ -77,22 +77,28 @@ public class MenuActivity extends AppCompatActivity {
         return true;
     }
 
-    private void showDialogAboutProgram() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
-        builder.setTitle(R.string.title_about_program)
-                .setMessage(R.string.message_about_program)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                });
-
-        builder.create();
-        builder.show();
+    private void openSettings() {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 
+    /*
+        private void showDialogAboutProgram() {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+            builder.setTitle(R.string.title_about_program)
+                    .setMessage(R.string.message_about_program)
+                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    });
+
+            builder.create();
+            builder.show();
+        }
+    */
     private void performFileSearch() {
         Intent fileIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         fileIntent.addCategory(Intent.CATEGORY_OPENABLE);
