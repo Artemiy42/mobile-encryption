@@ -39,7 +39,7 @@
     <!-- DecryptActivity -->
     <string name="decrypt_want_password">Для дешифрування треба ввести пароль</string>
     <string name="summary_developer" translatable="false">MisterC</string>
-    <string name="summary_version">1.4</string>
+    <string name="summary_version">1.3.5</string>
     <string name="title_developer">Розробник</string>
     <string name="title_version">Версія</string>
     <string name="title_settings">Налаштування</string>
